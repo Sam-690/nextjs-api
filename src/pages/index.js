@@ -13,7 +13,9 @@ export default function HomePage({ products }) {
         <Grid.Row>
           <Grid.Column textAlign="center">
             <h1></h1>
-
+            <img 
+              src="https://img.freepik.com/vector-gratis/ningun-concepto-ilustracion-datos_108061-573.jpg?size=338&ext=jpg" 
+              alt="No Product yet" />
             <div>
               <Button primary>Create a Product</Button>
             </div>
