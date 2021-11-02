@@ -31,7 +31,7 @@ export default function ProductFormPage() {
     
     const createProduct = async () => {
         try {
-            await fetch('http://localhost:3000/api/tasks', { 
+            await fetch('https://nextjs-apprest.herokuapp.com/api/tasks', { 
                 method: 'POST', 
                 headers: {
                     "Content-Type": "application/json"
