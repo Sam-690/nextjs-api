@@ -36,7 +36,7 @@ export default function HomePage({ products }) {
             </tr>
           </thead>
         {products.map((product) => (
-          <tbody key={product}>
+          <tbody key={product._id}>
             <tr>
               <td>{product.title}</td>
               <td>{product.price}</td>
@@ -54,7 +54,7 @@ export default function HomePage({ products }) {
 
 export const getServerSideProps = async (ctx) => {
 
-  const res = await fetch('http://localhost:3000/api/tasks/')
+  const res = await fetch('https://nextjs-apprest.herokuapp.com/api/tasks')
   const products = await res.json()
 
 
