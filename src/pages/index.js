@@ -30,8 +30,8 @@ export default function HomePage({ products }) {
           <thead>
             <tr>
               <th>Name</th>
-              <th>Status</th>
-              <th className="right aligned">Notes</th>
+              <th>Price</th>
+              <th className="right aligned">Quantity</th>
               <th>Options</th>
             </tr>
           </thead>
