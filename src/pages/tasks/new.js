@@ -94,7 +94,7 @@ export default function ProductFormPage() {
         >
             <Grid.Row>
                 <Grid.Column textAlign="center">
-                    <h1>{query.id ? 'Update Product' : 'Create Task'}</h1>
+                    <h1>{query.id ? 'Update Product' : 'Create Product'}</h1>
                     <Form onSubmit={handleSubmit}>
                         <Form.Input label="Product" placeholder="Product" name="title" onChange={handleChange} error={errors.title ? {content: 'Please enter a product name', pointing: "below"}: null} value={newProduct.title}></Form.Input>
                         <Form.Input label="Price" placeholder="Price" name="price" onChange={handleChange} error={errors.price ? {content: 'Please enter a product price'}: null} value={newProduct.price}></Form.Input>
