@@ -1,6 +1,9 @@
 import { Container, Button, Grid } from "semantic-ui-react";
+import { useRouter } from 'next/router';
 
 export default function HomePage({ products }) {
+
+  const router = useRouter();
 
   if (products.length === 0)
     return (
@@ -40,8 +43,9 @@ export default function HomePage({ products }) {
             <tr>
               <td>{product.title}</td>
               <td>{product.price}</td>
-              <td className="right aligned">{product.quantity}</td>
-              <td><Button primary>Edit</Button></td>
+              <td>{product.quantity}</td>
+              <td><Button primary  onClick={() => router.push(`/tasks/${product._id}`)}>View</Button></td>
+              <td><Button onClick={() => router.push(`/tasks/${product._id}/edit`)}>Edit</Button></td>
             </tr>
           </tbody>
         ))}
