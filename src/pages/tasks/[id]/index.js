@@ -36,16 +36,24 @@ export default function TaskDetail({product, error}) {
 
         return <Grid centered verticalAlign="middle" columns="1" style={{ height: "80vh" }}>
             <Grid.Row>
-                <Grid.Column textAlign="center">
-                    <h1>{product.title}</h1>
-                    <p>{product.price}</p>
-                    <p>{product.quantity}</p>
-                    <p>{product.createdAt}</p>
-
-                    <div> 
-                        <Button color="red" onClick={open} loading={isDeleting}>Delete</Button> 
+                <div className="ui cards">
+                    <div className="card">
+                        <div className="content">
+                            <div className="header">
+                                <h1>Product</h1>
+                            </div>
+                            <div className="description">
+                                <h3>Name: {product.title}</h3>
+                                <p>Price: {product.price}</p>
+                                <p>Quantity: {product.quantity}</p>
+                                <p>Create At: {product.createdAt}</p>
+                            </div>
+                            <div> 
+                                <Button color="red" onClick={open} loading={isDeleting}>Delete</Button> 
+                            </div>
+                        </div>
                     </div>
-                </Grid.Column>
+                </div>
             </Grid.Row>
             <Confirm content={`Are you sure you want to delete ${product._id}`} open={confirm} onConfirm={handleDelete} onCancel={close}/>
         </Grid>

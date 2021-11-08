@@ -34,7 +34,8 @@ export default function HomePage({ products }) {
             <tr>
               <th>Name</th>
               <th>Price</th>
-              <th className="right aligned">Quantity</th>
+              <th>Quantity</th>
+              <th>Options</th>
               <th>Options</th>
             </tr>
           </thead>
